@@ -1,41 +1,47 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>캘린더 만들기</title>
-
+  <!--글자깨짐 방지-->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="c.css">
+  <title>캘린더</title>
 </head>
-<body>      
-    <div class="calendar"> 
-        <div class="header">
-            <div class="year-month"></div>
-            <div class="nav">
-                <button class="nav-btn go-prev" onclick="preMonth()">&lt;</button>
-                <button class="nav-btn go-today" onclick="goToday()">오늘</button>
-                <button class="nav-btn go-next" onclick="nextMonth()">&gt;</button>
-            </div>
-        </div>
-        <div class="main">
-<!-- 요일에 대한 박스 큰 틀의 박스 테이블 -->
-            <div class="days">
-    <!-- 하나의 요일에 대한 박스 시작 -->
-                <div class="day">일</div>
-    <!-- 하나의 요일에 대한 박스 끝 -->
-                <div class="day">월</div>
-                <div class="day">화</div>
-                <div class="day">수</div>
-                <div class="day">목</div>
-                <div class="day">금</div>
-                <div class="day">토</div>
-            
-            </div>
-            <div class="dates"></div>
-        </div>
-<!-- 요일에 대한 박스 큰 틀의 박스 테이블 끝-->
+<body>
+  <!-- 캘린더의 큰 틀-->
+  <div class="calendar">
+    <!-- header의 큰 틀-->
+    <div class="header">
+      <!--년도 월의 틀-->
+      <div class="year"></div>
+      <!-- nav의 큰 틀-->
+      <div class="nav">
+        <!-- 이전 달, 다음 달, 오늘 이동 버튼-->
+        <button class="nb prev" onclick="prev()">&lt;</button>
+        <button class="nb go_today" onclick="Today()">오늘</button>
+        <button class="nb next" onclick="next()">&gt;</button>
+      </div>
     </div>
-    <link rel ="stylesheet" href="c.css">
-    <script src="e.js"></script>
+    <!-- main의 큰 틀 -->
+    <div class="main">
+      <!-- days의 큰 틀-->
+      <div class="days">
+        <!-- 요일-->
+        <div class="day">일</div>
+        <div class="day">월</div>
+        <div class="day">화</div>
+        <div class="day">수</div>
+        <div class="day">목</div>
+        <div class="day">금</div>
+        <div class="day">토</div>
+      </div>
+      <!-- 캘린더 날짜 -->
+      <div class="dates"></div>
+    </div>
+  </div>
+  <script src="d.js"></script>
 </body>
 </html>
+
+
